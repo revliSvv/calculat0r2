@@ -32,13 +32,16 @@ function findAB() {
   let a;
   let b;
 
-  if (/'√2'/g.test(input.c)) {
+  // /'√2'/g.test(input.c)
+  // input.c.indexOf('√2') > -1
+
+  if (input.c.indexOf('√2') > -1) {
     b = input.c.replace('√2', ' ');
     a = input.c.replace('√2', ' ');
   }
   else {
-    b = input.c + ' / 2';
-    a = input.c + ' / 2';
+    b = input.c + '√2 / 2';
+    a = input.c + '√2 / 2';
   }
 
 
